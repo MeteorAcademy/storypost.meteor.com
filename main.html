@@ -5,10 +5,12 @@
 <body>
     <header>
         <h1><i class="fa fa-paper-plane"></i> Post</h1>
-        <h2>Tell your story to the world.  Anonymously</h2>
+        <h2>Tell your story to the world.  Anonymously.</h2>
     </header>
 
   {{> submitPost}}
+
+  {{> post}}
 
   <footer>
       <p>
@@ -20,10 +22,25 @@
 
 <template name="submitPost">
     <form>
+        <input type="text" name="title" placeholder="Title" required>
         <textarea placeholder="Write to your heart's content!">
         </textarea>
         <input type="text" name="author" placeholder="Pen name" required>
 
         <input type="submit" value="Post!">
     </form>
+</template>
+
+<template name="post">
+    {{#each post}}
+        <section class="post">
+            <h3>{{title}}</h3>
+            <p>
+                {{story}}
+            </p>
+            <p>
+                &mdash; {{author}}, published at {{date}}
+            </p>
+        </section>
+    {{/each}}
 </template>
