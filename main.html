@@ -1,14 +1,29 @@
 <head>
-  <title>post.meteor.com</title>
+  <title>Post - Tell Your Story to the World</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+    <header>
+        <h1><i class="fa fa-paper-plane"></i> Post</h1>
+        <h2>Tell your story to the world.  Anonymously</h2>
+    </header>
 
-  {{> hello}}
+  {{> submitPost}}
+
+  <footer>
+      <p>
+      <a href="/">Post</a> was created by <a href="http://ciara.io" target="_blank">ciara</a> for 
+        <a href="http://meteor.academy" target="_blank">Meteor Academy</a>
+      </p>
+  </footer>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="submitPost">
+    <form>
+        <textarea placeholder="Write to your heart's content!">
+        </textarea>
+        <input type="text" name="author" placeholder="Pen name" required>
+
+        <input type="submit" value="Post!">
+    </form>
 </template>
