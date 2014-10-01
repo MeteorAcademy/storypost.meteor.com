@@ -8,7 +8,7 @@
         <h2>Tell your story to the world.  Anonymously.</h2>
     </header>
 
-  {{> submitPost}}
+  {{> submit}}
 
   {{> post}}
 
@@ -20,15 +20,16 @@
   </footer>
 </body>
 
-<template name="submitPost">
-    <form>
-        <input type="text" name="title" placeholder="Title" required>
-        <textarea placeholder="Write to your heart's content!">
-        </textarea>
-        <input type="text" name="author" placeholder="Pen name" required>
+<template name="submit">
+    <section class="submit">
+        <form>
+            <input type="text" name="title" placeholder="Title" required>
+            <textarea placeholder="Write to your heart's content!"></textarea>
+            <input type="text" name="author" placeholder="Pen name" required>
 
-        <input type="submit" value="Post!">
-    </form>
+            <input type="submit" value="Post!">
+        </form>
+    </section>
 </template>
 
 <template name="post">
