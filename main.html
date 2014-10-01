@@ -8,9 +8,9 @@
         <h2>Tell your story to the world.  Anonymously.</h2>
     </header>
 
-  {{> submit}}
+  {{> addPost}}
 
-  {{> post}}
+  {{> posts}}
 
   <footer>
       <p>
@@ -20,8 +20,8 @@
   </footer>
 </body>
 
-<template name="submit">
-    <section class="submit">
+<template name="addPost">
+    <section class="addPost">
         <form>
             <input type="text" name="title" placeholder="Title" required>
             <textarea placeholder="Write to your heart's content!"></textarea>
@@ -29,19 +29,21 @@
 
             <input type="submit" value="Post!">
         </form>
-    </section>
+    </section><!-- end .addPost -->
 </template>
 
-<template name="post">
-    {{#each post}}
-        <section class="post">
-            <h3>{{title}}</h3>
-            <p>
-                {{story}}
-            </p>
-            <p>
-                &mdash; {{author}}, published at {{date}}
-            </p>
-        </section>
-    {{/each}}
+<template name="posts">
+    <section class="main">
+        {{#each posts}}
+            <article>
+                <h3>{{title}}</h3>
+                <p>
+                    {{story}}
+                </p>
+                <p>
+                    &mdash; {{author}}, published at {{date}}
+                </p>
+            </article>
+        {{/each}}
+    </section><!-- end .main -->
 </template>
