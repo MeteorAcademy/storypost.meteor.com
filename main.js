@@ -37,15 +37,15 @@ if (Meteor.isClient) {
         }
     });
 
-    Template.posts.helpers({
-        posts: function() {
-            return Posts.find();
-        }
-    });
-
     Template.posts.events({
         'click .delete': function() {
             Meteor.call('deletePost', this._id);
+        }
+    });
+
+    Template.posts.helpers({
+        posts: function() {
+            return Posts.find();
         }
     });
 }
