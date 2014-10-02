@@ -23,9 +23,9 @@
 <template name="addPost">
     <section class="addPost">
         <form>
-            <input type="text" name="title" placeholder="Title" required>
-            <textarea placeholder="Write to your heart's content!"></textarea>
-            <input type="text" name="author" placeholder="Pen name" required>
+            <input type="text" name="title" class="title" placeholder="Title" required>
+            <textarea class="story" placeholder="Write to your heart's content!"></textarea>
+            <input type="text" name="author" class="author" placeholder="Pen name" required>
 
             <input type="submit" value="Post!">
         </form>
@@ -33,7 +33,7 @@
 </template>
 
 <template name="posts">
-    <section class="main">
+    <section class="posts">
         {{#each posts}}
             <article>
                 <h3>{{title}}</h3>
@@ -41,7 +41,8 @@
                     {{story}}
                 </p>
                 <p>
-                    &mdash; {{author}}, published at {{date}}
+                    &mdash; {{author}}, published on {{date}} 
+                    <i class="fa fa-trash delete"></i>
                 </p>
             </article>
         {{/each}}
