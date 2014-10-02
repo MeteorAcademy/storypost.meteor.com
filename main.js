@@ -10,6 +10,9 @@ if (Meteor.isServer) {
             author: author,
             date: date
            }); 
+        },
+        deletePost: function(id) {
+            Posts.remove(id);
         }
     });
 }
@@ -37,6 +40,12 @@ if (Meteor.isClient) {
     Template.posts.helpers({
         posts: function() {
             return Posts.find();
+        }
+    });
+
+    Template.posts.events({
+        'click .delete': function() {
+            Meteor.call('deletePost', this._id);
         }
     });
 }
