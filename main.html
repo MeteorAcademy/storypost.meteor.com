@@ -4,21 +4,23 @@
 </head>
 
 <body>
-    <header>
-        <h1><i class="fa fa-paper-plane"></i> Post</h1>
-        <h2>Tell your story to the world.  Anonymously.</h2>
-    </header>
+    <div class="container">
+        <header>
+            <h1><i class="fa fa-paper-plane"></i> Post</h1>
+            <h2>Tell your story to the world.  Anonymously.</h2>
+        </header>
 
-  {{> addPost}}
+        {{> addPost}}
 
-  {{> posts}}
+        {{> posts}}
 
-  <footer>
-      <p>
-      <a href="/">Post</a> was created by <a href="http://ciara.io" target="_blank">ciara</a> for 
-        <a href="http://meteor.academy" target="_blank">Meteor Academy</a>
-      </p>
-  </footer>
+        <footer>
+            <p>
+                <a href="/">Post</a> was created by <a href="http://ciara.io" target="_blank">ciara</a> for 
+                <a href="http://meteor.academy" target="_blank">Meteor Academy</a>
+            </p>
+       </footer>
+  </div><!-- end .container -->
 </body>
 
 <template name="addPost">
