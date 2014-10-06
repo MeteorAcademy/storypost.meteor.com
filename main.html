@@ -12,7 +12,7 @@
 
         {{> addPost}}
 
-        {{> posts}}
+        {{> postList}}
 
         <footer>
             <p>
@@ -35,8 +35,8 @@
     </section><!-- end .addPost -->
 </template>
 
-<template name="posts">
-    <section class="posts">
+<template name="postList">
+    <section class="postList">
         {{#each posts}}
             <article>
                 <h3>{{title}}</h3>
